@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Googleスプレッドシートで3枚のシートを作る説明図</title>
+  <desc id="desc">画面下部のシートタブと追加ボタンを赤枠で示した注釈画像。</desc>
+  <rect width="960" height="540" fill="#f5f7fb"/>
+  <rect x="24" y="24" width="912" height="492" rx="8" fill="#fff" stroke="#d0d7de"/>
+  <rect x="24" y="24" width="912" height="48" rx="8" fill="#eef3f8"/>
+  <circle cx="52" cy="48" r="10" fill="#fbbc04"/>
+  <text x="78" y="54" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="20" font-weight="700" fill="#202124">無題のスプレッドシート</text>
+  <rect x="48" y="105" width="860" height="320" fill="#ffffff" stroke="#d0d7de"/>
+  <g stroke="#d0d7de" stroke-width="1">
+    <line x1="48" y1="145" x2="908" y2="145"/>
+    <line x1="48" y1="185" x2="908" y2="185"/>
+    <line x1="48" y1="225" x2="908" y2="225"/>
+    <line x1="48" y1="265" x2="908" y2="265"/>
+    <line x1="48" y1="305" x2="908" y2="305"/>
+    <line x1="48" y1="345" x2="908" y2="345"/>
+    <line x1="48" y1="385" x2="908" y2="385"/>
+    <line x1="118" y1="105" x2="118" y2="425"/>
+    <line x1="238" y1="105" x2="238" y2="425"/>
+    <line x1="358" y1="105" x2="358" y2="425"/>
+    <line x1="478" y1="105" x2="478" y2="425"/>
+    <line x1="598" y1="105" x2="598" y2="425"/>
+    <line x1="718" y1="105" x2="718" y2="425"/>
+    <line x1="838" y1="105" x2="838" y2="425"/>
+  </g>
+  <rect x="48" y="452" width="92" height="36" rx="18" fill="#e8f0fe" stroke="#1a73e8"/>
+  <text x="74" y="475" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="15" fill="#202124">カウント</text>
+  <rect x="148" y="452" width="78" height="36" rx="18" fill="#f1f3f4" stroke="#d0d7de"/>
+  <text x="174" y="475" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="15" fill="#202124">確率</text>
+  <rect x="234" y="452" width="90" height="36" rx="18" fill="#f1f3f4" stroke="#d0d7de"/>
+  <text x="260" y="475" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="15" fill="#202124">情報量</text>
+  <circle cx="354" cy="470" r="17" fill="#f1f3f4" stroke="#d0d7de"/>
+  <text x="348" y="477" font-family="Arial,sans-serif" font-size="22" fill="#202124">+</text>
+  <rect x="42" y="444" width="292" height="52" fill="none" stroke="#ff2a00" stroke-width="6"/>
+  <path d="M508 370 L380 452" fill="none" stroke="#ff2a00" stroke-width="7" marker-end="url(#arrow)"/>
+  <rect x="506" y="314" width="324" height="64" fill="#fff" stroke="#ff2a00" stroke-width="5"/>
+  <text x="526" y="354" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="22" font-weight="700" fill="#202124">タブ名を3つに変更</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff2a00"/>
+    </marker>
+  </defs>
+</svg>
+

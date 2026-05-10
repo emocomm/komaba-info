@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">情報量シートでB143からAA143まで平均情報量を出す説明図</title>
+  <desc id="desc">左端に行番号、その右にA列、B:H、I:N、O:U、V:AAの範囲が並ぶ表で、B143からAA143までの平均情報量の行を赤枠で示す。</desc>
+  <rect width="960" height="540" fill="#f5f7fb"/>
+  <rect x="36" y="34" width="888" height="448" rx="8" fill="#fff" stroke="#d0d7de"/>
+  <rect x="58" y="96" width="844" height="306" fill="#fff" stroke="#d0d7de"/>
+  <rect x="58" y="96" width="844" height="40" fill="#f1f3f4"/>
+  <rect x="58" y="96" width="44" height="306" fill="#f1f3f4"/>
+  <g stroke="#d0d7de" stroke-width="1">
+    <line x1="58" y1="136" x2="902" y2="136"/>
+    <line x1="58" y1="176" x2="902" y2="176"/>
+    <line x1="58" y1="216" x2="902" y2="216"/>
+    <line x1="58" y1="256" x2="902" y2="256"/>
+    <line x1="58" y1="296" x2="902" y2="296"/>
+    <line x1="58" y1="336" x2="902" y2="336"/>
+    <line x1="58" y1="376" x2="902" y2="376"/>
+    <line x1="102" y1="96" x2="102" y2="402"/>
+    <line x1="182" y1="96" x2="182" y2="402"/>
+    <line x1="362" y1="96" x2="362" y2="402"/>
+    <line x1="522" y1="96" x2="522" y2="402"/>
+    <line x1="702" y1="96" x2="702" y2="402"/>
+  </g>
+  <g font-family="Arial,sans-serif" font-size="15" fill="#5f6368">
+    <text x="142" y="122" text-anchor="middle">A</text>
+    <text x="272" y="122" text-anchor="middle">B:H</text>
+    <text x="442" y="122" text-anchor="middle">I:N</text>
+    <text x="612" y="122" text-anchor="middle">O:U</text>
+    <text x="802" y="122" text-anchor="middle">V:AA</text>
+    <text x="80" y="282" text-anchor="middle">4</text>
+    <text x="80" y="322" text-anchor="middle">...</text>
+    <text x="80" y="362" text-anchor="middle">142</text>
+    <text x="80" y="402" text-anchor="middle">143</text>
+  </g>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="15" fill="#7a828c">
+    <text x="272" y="162" text-anchor="middle">A 発話</text>
+    <text x="442" y="162" text-anchor="middle">A 累積</text>
+    <text x="612" y="162" text-anchor="middle">B 発話</text>
+    <text x="802" y="162" text-anchor="middle">B 累積</text>
+    <text x="142" y="282" text-anchor="middle">々</text>
+    <text x="142" y="362" text-anchor="middle">ん</text>
+  </g>
+  <g font-family="SFMono-Regular,Consolas,monospace" font-size="16" font-weight="700" fill="#202124">
+    <text x="272" y="402" text-anchor="middle">4.35 ... 4.38</text>
+    <text x="442" y="402" text-anchor="middle">4.93 ... 5.53</text>
+    <text x="612" y="402" text-anchor="middle">4.32 ... 4.36</text>
+    <text x="802" y="402" text-anchor="middle">5.06 ... 6.29</text>
+  </g>
+  <rect x="182" y="376" width="720" height="40" fill="none" stroke="#ff2a00" stroke-width="6"/>
+  <rect x="126" y="438" width="708" height="54" fill="#fff" stroke="#ff2a00" stroke-width="5"/>
+  <text x="150" y="472" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="21" font-weight="700" fill="#202124">B143:AA143 に、AとB両方の平均情報量 H が並ぶ</text>
+</svg>

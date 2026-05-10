@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">グラフ用の表を選択してグラフを挿入する説明図</title>
+  <desc id="desc">グラフ用に作った表を選択し、挿入メニューからグラフを選ぶ流れを赤枠で示す。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff2a00"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" fill="#f5f7fb"/>
+  <rect x="30" y="30" width="900" height="456" rx="8" fill="#fff" stroke="#d0d7de"/>
+  <rect x="54" y="54" width="92" height="34" fill="#fff" stroke="#ff2a00" stroke-width="5"/>
+  <text x="72" y="77" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#202124">挿入</text>
+  <rect x="54" y="96" width="220" height="172" rx="4" fill="#fff" stroke="#d0d7de"/>
+  <text x="76" y="136" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#202124">画像</text>
+  <text x="76" y="176" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#202124">図形描画</text>
+  <rect x="60" y="196" width="208" height="42" fill="#e8eaed"/>
+  <text x="76" y="223" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" font-weight="700" fill="#202124">グラフ</text>
+  <rect x="58" y="194" width="212" height="46" fill="none" stroke="#ff2a00" stroke-width="5"/>
+  <rect x="340" y="90" width="480" height="330" fill="#fff" stroke="#d0d7de"/>
+  <g stroke="#d0d7de" stroke-width="1">
+    <line x1="340" y1="140" x2="820" y2="140"/>
+    <line x1="340" y1="185" x2="820" y2="185"/>
+    <line x1="340" y1="230" x2="820" y2="230"/>
+    <line x1="340" y1="275" x2="820" y2="275"/>
+    <line x1="340" y1="320" x2="820" y2="320"/>
+    <line x1="340" y1="365" x2="820" y2="365"/>
+    <line x1="460" y1="90" x2="460" y2="420"/>
+    <line x1="640" y1="90" x2="640" y2="420"/>
+  </g>
+  <rect x="340" y="90" width="480" height="50" fill="#f1f3f4"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="15" fill="#202124">
+    <text x="400" y="122" text-anchor="middle">発話</text>
+    <text x="550" y="122" text-anchor="middle">パターンA</text>
+    <text x="730" y="122" text-anchor="middle">パターンB</text>
+    <text x="400" y="172" text-anchor="middle">1</text>
+    <text x="550" y="172" text-anchor="middle">=情報量!B143</text>
+    <text x="730" y="172" text-anchor="middle">=情報量!O143</text>
+    <text x="400" y="217" text-anchor="middle">2</text>
+    <text x="550" y="217" text-anchor="middle">=情報量!C143</text>
+    <text x="730" y="217" text-anchor="middle">=情報量!P143</text>
+    <text x="400" y="262" text-anchor="middle">...</text>
+    <text x="550" y="262" text-anchor="middle">...</text>
+    <text x="730" y="262" text-anchor="middle">...</text>
+  </g>
+  <rect x="340" y="90" width="480" height="330" fill="none" stroke="#ff2a00" stroke-width="6"/>
+  <path d="M276 216 L334 216" fill="none" stroke="#ff2a00" stroke-width="7" marker-end="url(#arrow)"/>
+  <rect x="254" y="446" width="452" height="48" fill="#fff" stroke="#ff2a00" stroke-width="5"/>
+  <text x="278" y="477" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="20" font-weight="700" fill="#202124">グラフ用の表を選択してから 挿入 → グラフ</text>
+</svg>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+  {% assign section_base = page.section_base %}
+  {% unless section_base %}
+    {% assign url_parts = page.url | split: '/' %}
+    {% if url_parts[1] %}
+      {% assign section_base = '/' | append: url_parts[1] %}
+    {% else %}
+      {% assign section_base = '' %}
+    {% endif %}
+  {% endunless %}
+  {% assign section_key = section_base | remove_first: '/' %}
+  {% assign section_nav = nil %}
+  {% for section_entry in site.data.navigation.sections %}
+    {% if section_entry[0] == section_key %}
+      {% assign section_nav = section_entry[1] %}
+    {% endif %}
+  {% endfor %}
+  {% assign current_position = nil %}
+  {% assign current_page_url = page.url %}
+  {% assign previous_index = nil %}
+  {% assign next_index = nil %}
+  {% assign total_pages = 0 %}
+  {% if section_nav %}
+    {% assign total_pages = section_nav.pages | size %}
+    {% for nav_page in section_nav.pages %}
+      {% if nav_page.url == current_page_url %}
+        {% assign current_position = forloop.index %}
+        {% assign previous_index = forloop.index0 | minus: 1 %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% assign previous_page = nil %}
+  {% assign next_page = nil %}
+  {% if current_position %}
+    {% for nav_page in section_nav.pages %}
+      {% if forloop.index0 == previous_index %}
+        {% assign previous_page = nav_page %}
+      {% endif %}
+      {% if forloop.index0 == next_index %}
+        {% assign next_page = nav_page %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.lead | default: site.description | strip_html }}">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  </head>
+  <body data-baseurl="{{ section_base | relative_url }}">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="{{ section_base | append: '/' | relative_url }}" aria-label="トップへ">
+          <span class="brand-kicker">駒場情報演習教材</span>
+          <strong class="brand-title">{{ section_nav.title | default: site.description }}</strong>
+        </a>
+        {% if section_nav %}
+          <details class="nav-menu">
+            <summary class="nav-menu-trigger" aria-label="ページ一覧を開く">
+              <span class="nav-progress">
+                {% if current_position %}
+                  ({{ current_position }}/{{ total_pages }})
+                {% else %}
+                  メニュー
+                {% endif %}
+              </span>
+              <span class="hamburger" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </summary>
+            <div class="nav-menu-panel">
+              <h2>ページ一覧</h2>
+              <ol class="nav-page-list">
+                {% for nav_page in section_nav.pages %}
+                  <li>
+                    <a class="{% if nav_page.url == current_page_url %}current{% endif %}" href="{{ nav_page.url | relative_url }}">
+                      <span>{{ forloop.index }}</span>
+                      {{ nav_page.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ol>
+              {% if section_nav.tools %}
+                <h2>ツール一覧</h2>
+                <ul class="nav-tool-list">
+                  {% for tool in section_nav.tools %}
+                    <li>
+                      <a class="{% if tool.url == current_page_url %}current{% endif %}" href="{{ tool.url | relative_url }}">{{ tool.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          </details>
+        {% endif %}
+      </div>
+    </header>
+
+    <main class="main">
+      <header class="page-head">
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% if page.lead %}
+          <p class="lead">{{ page.lead }}</p>
+        {% endif %}
+      </header>
+
+      {{ content }}
+
+      <p class="copy-status" role="status" aria-live="polite"></p>
+    </main>
+
+    {% assign footer_prev_url = page.prev_url %}
+    {% assign footer_next_url = page.next_url %}
+    {% if previous_page %}
+      {% assign footer_prev_url = previous_page.url %}
+    {% endif %}
+    {% if next_page %}
+      {% assign footer_next_url = next_page.url %}
+    {% endif %}
+    {% if footer_prev_url or footer_next_url %}
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div>
+            {% if footer_prev_url %}
+              <a class="button-link secondary" href="{{ footer_prev_url | relative_url }}">前へ</a>
+            {% endif %}
+          </div>
+          <div>
+            {% if footer_next_url %}
+              <a class="button-link" href="{{ footer_next_url | relative_url }}">次へ</a>
+            {% endif %}
+          </div>
+        </div>
+      </footer>
+    {% endif %}
+
+    <script src="{{ '/assets/site.js' | relative_url }}"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+title: "駒場情報演習教材"
+description: "チャット会話の平均情報量分析"
+baseurl: "/komaba-info"
+url: ""
+markdown: kramdown
+permalink: pretty
+exclude:
+  - "20260511/docs"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "README.md"
+  - "vendor"
+  - ".bundle"
+  - ".DS_Store"

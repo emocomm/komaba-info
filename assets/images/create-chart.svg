@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">グラフを挿入する説明図</title>
+  <desc id="desc">左端に行番号、その右にA列からH列が並ぶ表で、情報量シートのH値を選択し、挿入メニューからグラフを選ぶ流れを赤枠で示した注釈画像。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff2a00"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" fill="#f5f7fb"/>
+  <rect x="30" y="30" width="900" height="456" rx="8" fill="#fff" stroke="#d0d7de"/>
+
+  <rect x="48" y="52" width="96" height="34" fill="#fff" stroke="#ff2a00" stroke-width="5"/>
+  <text x="66" y="75" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#202124">挿入</text>
+  <rect x="48" y="92" width="220" height="188" rx="4" fill="#fff" stroke="#d0d7de"/>
+  <text x="70" y="132" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#202124">画像</text>
+  <text x="70" y="172" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" fill="#202124">図形描画</text>
+  <rect x="54" y="192" width="208" height="42" fill="#e8eaed"/>
+  <text x="70" y="219" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="16" font-weight="700" fill="#202124">グラフ</text>
+  <rect x="52" y="190" width="212" height="46" fill="none" stroke="#ff2a00" stroke-width="5"/>
+
+  <rect x="310" y="112" width="560" height="296" fill="#fff" stroke="#d0d7de"/>
+  <rect x="310" y="112" width="560" height="40" fill="#f1f3f4"/>
+  <rect x="310" y="112" width="40" height="296" fill="#f1f3f4"/>
+  <g stroke="#d0d7de" stroke-width="1">
+    <line x1="310" y1="152" x2="870" y2="152"/>
+    <line x1="310" y1="192" x2="870" y2="192"/>
+    <line x1="310" y1="232" x2="870" y2="232"/>
+    <line x1="310" y1="272" x2="870" y2="272"/>
+    <line x1="310" y1="312" x2="870" y2="312"/>
+    <line x1="310" y1="352" x2="870" y2="352"/>
+    <line x1="310" y1="392" x2="870" y2="392"/>
+    <line x1="350" y1="112" x2="350" y2="408"/>
+    <line x1="415" y1="112" x2="415" y2="408"/>
+    <line x1="480" y1="112" x2="480" y2="408"/>
+    <line x1="545" y1="112" x2="545" y2="408"/>
+    <line x1="610" y1="112" x2="610" y2="408"/>
+    <line x1="675" y1="112" x2="675" y2="408"/>
+    <line x1="740" y1="112" x2="740" y2="408"/>
+    <line x1="805" y1="112" x2="805" y2="408"/>
+  </g>
+
+  <g font-family="Arial,sans-serif" font-size="14" fill="#5f6368">
+    <text x="382" y="137" text-anchor="middle">A</text>
+    <text x="447" y="137" text-anchor="middle">B</text>
+    <text x="512" y="137" text-anchor="middle">C</text>
+    <text x="577" y="137" text-anchor="middle">D</text>
+    <text x="642" y="137" text-anchor="middle">E</text>
+    <text x="707" y="137" text-anchor="middle">F</text>
+    <text x="772" y="137" text-anchor="middle">G</text>
+    <text x="837" y="137" text-anchor="middle">H</text>
+    <text x="330" y="177" text-anchor="middle">1</text>
+    <text x="330" y="217" text-anchor="middle">2</text>
+    <text x="330" y="257" text-anchor="middle">3</text>
+    <text x="330" y="377" text-anchor="middle">143</text>
+  </g>
+
+  <g font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="14" fill="#7a828c">
+    <text x="447" y="376" text-anchor="middle">4.35</text>
+    <text x="512" y="376" text-anchor="middle">4.48</text>
+    <text x="577" y="376" text-anchor="middle">4.01</text>
+    <text x="642" y="376" text-anchor="middle">4.52</text>
+    <text x="707" y="376" text-anchor="middle">4.24</text>
+    <text x="772" y="376" text-anchor="middle">4.51</text>
+    <text x="837" y="376" text-anchor="middle">4.38</text>
+  </g>
+
+  <rect x="415" y="352" width="455" height="40" fill="none" stroke="#ff2a00" stroke-width="6"/>
+  <path d="M268 214 L306 214" fill="none" stroke="#ff2a00" stroke-width="7" marker-end="url(#arrow)"/>
+  <path d="M448 430 L578 396" fill="none" stroke="#ff2a00" stroke-width="7" marker-end="url(#arrow)"/>
+  <text x="406" y="462" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif" font-size="20" font-weight="700" fill="#202124">H値の行を選択してから挿入 → グラフ</text>
+</svg>
