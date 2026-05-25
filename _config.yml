@@ -6,6 +6,7 @@ markdown: kramdown
 permalink: pretty
 exclude:
   - "20260511/docs"
+  - "20260525/docs"
   - "Gemfile"
   - "Gemfile.lock"
   - "README.md"

@@ -29,3 +29,30 @@ sections:
         url: "/20260511/count/"
       - title: "TSV変換"
         url: "/20260511/tsv/"
+  "20260525":
+    title: "公開鍵暗号とディジタル署名"
+    pages:
+      - title: "今日の課題の全体像"
+        url: "/20260525/overview/"
+      - title: "共通鍵暗号と公開鍵暗号の復習"
+        url: "/20260525/review/"
+      - title: "鍵の役割整理"
+        url: "/20260525/key-roles/"
+      - title: "期末試験型の穴埋め問題"
+        url: "/20260525/exam-practice/"
+      - title: "暗号化の手順"
+        url: "/20260525/encrypt/"
+      - title: "署名の手順"
+        url: "/20260525/sign/"
+      - title: "LMS提出直前の確認"
+        url: "/20260525/submission/"
+    tools:
+      - title: "鍵ペア作成"
+        url: "/20260525/keygen/"
+        new_tab: true
+      - title: "暗号化ツール"
+        url: "/20260525/encrypt-tool/"
+        new_tab: true
+      - title: "署名ツール"
+        url: "/20260525/sign-tool/"
+        new_tab: true

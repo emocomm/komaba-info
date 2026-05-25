@@ -28,7 +28,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic",
+    "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.7;
   letter-spacing: 0;
@@ -518,10 +520,27 @@ textarea.result {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
+textarea.compact-result {
+  min-height: 7.5rem;
+}
+
+textarea.visual-fingerprint {
+  min-height: 18.5rem;
+  line-height: 1.35;
+  white-space: pre;
+  overflow: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
 .checkbox-row {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+}
+
+.checkbox-row.block-row {
+  display: flex;
+  margin: 1rem 0;
 }
 
 .result-meta {
@@ -546,6 +565,31 @@ textarea.result {
 
 .hidden {
   display: none !important;
+}
+
+/* .callout {
+  white-space: pre-line;
+} */
+
+.exam-text,
+.word-bank {
+  max-width: 82ch;
+  margin: 1rem 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 1rem;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.exam-text {
+  line-height: 1.85;
+}
+
+.word-bank {
+  background: #f8fafc;
+  font-weight: 700;
 }
 
 .muted {

@@ -90,7 +90,7 @@
                 <ul class="nav-tool-list">
                   {% for tool in section_nav.tools %}
                     <li>
-                      <a class="{% if tool.url == current_page_url %}current{% endif %}" href="{{ tool.url | relative_url }}">{{ tool.title }}</a>
+                      <a class="{% if tool.url == current_page_url %}current{% endif %}" href="{{ tool.url | relative_url }}"{% if tool.new_tab %} target="_blank" rel="noopener"{% endif %}>{{ tool.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>
