@@ -15,16 +15,25 @@ UROLには、次の3つを1つのテキスト欄に書いて提出します。
 <div class="form-field">
   <label for="submission-cipher">暗号文</label>
   <textarea id="submission-cipher" class="result" placeholder="CIPHER-..."></textarea>
+  <p class="result-meta">
+    この欄は自動入力されません。暗号化ツールで作った暗号文を自分で貼り付けます。
+  </p>
 </div>
 
 <div class="form-field">
   <label for="submission-signature">ディジタル署名</label>
   <textarea id="submission-signature" class="result" placeholder="SIG-..."></textarea>
+  <p class="result-meta">
+    この欄は自動入力されません。署名ツールで作ったディジタル署名を自分で貼り付けます。
+  </p>
 </div>
 
 <div class="form-field">
   <label for="submission-public-key">自分の公開鍵</label>
   <textarea id="submission-public-key" class="result" placeholder="PUB-..."></textarea>
+  <p class="result-meta">
+    この欄は自動入力されません。鍵ペア作成ツールの「私の公開鍵」を自分で貼り付けます。
+  </p>
 </div>
 
 <div class="toolbar">

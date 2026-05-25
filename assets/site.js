@@ -943,17 +943,99 @@
     function initSubmission() {
       const button = document.querySelector("#build-submission");
       if (!button) return;
-      const pair = savedKeypair();
-      const cipher = getJson(keys.cipher);
-      const signature = getJson(keys.signature);
-      if (cipher && cipher.cipherText)
-        setValue("#submission-cipher", cipher.cipherText);
-      if (signature && signature.signature)
-        setValue("#submission-signature", signature.signature);
-      if (pair && pair.publicKey)
-        setValue("#submission-public-key", pair.publicKey);
 
-      button.addEventListener("click", () => {
+      button.addEventListener("click", async () => {
+        const cipherInput = document.querySelector("#submission-cipher");
+        const signatureInput = document.querySelector("#submission-signature");
+        const publicInput = document.querySelector("#submission-public-key");
+        const cipherText = compact(cipherInput.value);
+        const signatureText = compact(signatureInput.value);
+        const publicKey = compact(publicInput.value);
+        if (!cipherText) {
+          alert(
+            "確認してください。暗号文欄は自動入力されません。暗号化ツールで作った CIPHER-... を自分で貼り付けてください。",
+          );
+          cipherInput.focus();
+          return;
+        }
+        if (!cipherText.startsWith("CIPHER-")) {
+          alert(
+            "確認してください。暗号文欄には CIPHER-... から始まる暗号文を貼り付けてください。",
+          );
+          cipherInput.focus();
+          return;
+        }
+        try {
+          parseWrapped(cipherText, "CIPHER");
+        } catch (error) {
+          alert("確認してください。暗号文欄を暗号文として読めません。");
+          cipherInput.focus();
+          return;
+        }
+        if (!signatureText) {
+          alert(
+            "確認してください。ディジタル署名欄は自動入力されません。署名ツールで作った SIG-... を自分で貼り付けてください。",
+          );
+          signatureInput.focus();
+          return;
+        }
+        if (!signatureText.startsWith("SIG-")) {
+          alert(
+            "確認してください。ディジタル署名欄には SIG-... から始まるディジタル署名を貼り付けてください。",
+          );
+          signatureInput.focus();
+          return;
+        }
+        try {
+          parseWrapped(signatureText, "SIG");
+        } catch (error) {
+          alert(
+            "確認してください。ディジタル署名欄をディジタル署名として読めません。",
+          );
+          signatureInput.focus();
+          return;
+        }
+        if (!publicKey) {
+          alert(
+            "確認してください。自分の公開鍵欄は自動入力されません。鍵ペア作成ツールの「私の公開鍵」を自分で貼り付けてください。",
+          );
+          publicInput.focus();
+          return;
+        }
+        if (publicKey.startsWith("SEC-")) {
+          alert(
+            "確認してください。自分の公開鍵欄に秘密鍵が入っています。秘密鍵は提出しません。鍵ペア作成ツールの「私の公開鍵」を貼り付けてください。",
+          );
+          publicInput.focus();
+          return;
+        }
+        if (!publicKey.startsWith("PUB-")) {
+          alert(
+            "確認してください。自分の公開鍵欄には PUB-... から始まる公開鍵を貼り付けてください。",
+          );
+          publicInput.focus();
+          return;
+        }
+        let publicInfo;
+        try {
+          publicInfo = await importPublic(publicKey);
+        } catch (error) {
+          alert("確認してください。自分の公開鍵欄を公開鍵として読めません。");
+          publicInput.focus();
+          return;
+        }
+        const teacher = getJson(keys.teacherFingerprint);
+        if (
+          teacher &&
+          teacher.fingerprint &&
+          publicInfo.fingerprint === teacher.fingerprint
+        ) {
+          alert(
+            "確認してください。これは暗号化に使った教員の公開鍵のようです。LMSに提出するのは、鍵ペア作成ツールで作った自分の公開鍵です。",
+          );
+          publicInput.focus();
+          return;
+        }
         const text = buildSubmissionText();
         setValue("#submission-output", text);
         if (/SEC-/.test(text)) {
