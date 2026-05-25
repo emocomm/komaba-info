@@ -18,7 +18,7 @@ lead: "暗号化ツールで作った暗号文に、自分の秘密鍵でディ�
 4. 「署名する対象」欄に、暗号文 `CIPHER-...` を入れる
 5. 「署名に使う鍵」欄に、自分の秘密鍵 `SEC-...` を入れる
 6. 「署名」を実行し、`SIG-...` から始まるディジタル署名をコピーする
-7. 秘密鍵 `SEC-...` はLMSには提出しない
+7. 秘密鍵 `SEC-...` はUROLには提出しない
 
 <div class="toolbar">
   <a class="button-link" href="{{ '/20260525/sign-tool/' | relative_url }}" target="_blank" rel="noopener">署名ツールを開く</a>
