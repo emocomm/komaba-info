@@ -1,0 +1,36 @@
+---
+layout: null
+sitemap: false
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ページが移動しました</title>
+<script>
+(function () {
+  var base = {{ site.baseurl | jsonify }} || '';
+  var path = window.location.pathname;
+  if (base && path.indexOf(base) === 0) {
+    path = path.slice(base.length);
+  }
+  var redirects = {
+    '/20260511': '/entropy/',
+    '/20260525': '/crypto/',
+    '/20260608': '/scratch/'
+  };
+  for (var prefix in redirects) {
+    if (path === prefix || path === prefix + '/' || path.indexOf(prefix + '/') === 0) {
+      window.location.replace(base + redirects[prefix]);
+      return;
+    }
+  }
+})();
+</script>
+</head>
+<body>
+<h1>ページが見つかりません</h1>
+<p>お探しのページは存在しないか、移動した可能性があります。<a href="{{ '/' | relative_url }}">トップページ</a>へ戻る。</p>
+</body>
+</html>

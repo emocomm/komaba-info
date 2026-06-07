@@ -1,13 +1,16 @@
 ---
 layout: default
 title: "駒場情報演習教材"
-lead: "20260511の教材ページへ移動します。"
-section_base: /20260511
-next_url: /20260511/
+lead: "駒場情報（担当: Hautasaari Ari先生）で使う演習用の教材です。取り組む課題を選んでください。"
 ---
 
-<meta http-equiv="refresh" content="0; url={{ '/20260511/' | relative_url }}">
-
-## 教材ページへ
-
-自動で移動しない場合は、[20260511の教材ページ]({{ '/20260511/' | relative_url }}) を開いてください。
+<div class="card-grid home-grid">
+  {% for section in site.data.home.sections %}
+    {% if section.visible %}
+      <a class="card home-card" href="{{ section.url | relative_url }}">
+        <h3>{{ section.title }}</h3>
+        <p>{{ section.description }}</p>
+      </a>
+    {% endif %}
+  {% endfor %}
+</div>

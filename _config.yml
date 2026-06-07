@@ -3,10 +3,16 @@ description: "チャット会話の平均情報量分析"
 baseurl: "/komaba-info"
 url: ""
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 permalink: pretty
 exclude:
-  - "20260511/docs"
-  - "20260525/docs"
+  - "entropy/docs"
+  - "crypto/docs"
   - "Gemfile"
   - "Gemfile.lock"
   - "README.md"

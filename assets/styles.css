@@ -355,6 +355,37 @@ button.small {
   margin-top: 0;
 }
 
+.home-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+a.home-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.home-card:hover,
+a.home-card:focus-visible {
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+a.home-card h3 {
+  color: var(--primary-dark, var(--primary));
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a.home-card p {
+  margin-bottom: 0;
+  color: var(--text-2, inherit);
+  text-decoration: none;
+}
+
 .callout {
   max-width: 82ch;
   margin: 1rem 0;
@@ -430,6 +461,128 @@ code.inline {
   background: #e8eef4;
   color: #1f2937;
 }
+
+/* Inline code from backticks: `code` — light chip, NOT the dark code block */
+code.language-plaintext.highlighter-rouge {
+  padding: 0.08rem 0.32rem;
+  border-radius: 5px;
+  background: #e8eef4;
+  color: #1f2937;
+  font-size: 0.94em;
+}
+
+/* Syntax-highlighted block-level code (kramdown + Rouge, with line numbers) */
+div.highlighter-rouge,
+figure.highlight {
+  margin: 1rem 0;
+  border-radius: 8px;
+  background: var(--code-bg);
+  color: var(--code-ink);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  overflow: hidden;
+}
+
+div.highlighter-rouge .highlight,
+figure.highlight .highlight {
+  margin: 0;
+  background: transparent;
+}
+
+div.highlighter-rouge pre,
+figure.highlight pre {
+  margin: 0;
+  background: transparent;
+  color: inherit;
+}
+
+div.highlighter-rouge code,
+figure.highlight code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+table.rouge-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  min-width: 0;
+}
+
+table.rouge-table,
+table.rouge-table tbody,
+table.rouge-table tr,
+table.rouge-table td {
+  background: transparent;
+  border: 0;
+}
+
+table.rouge-table td {
+  padding: 0;
+  vertical-align: top;
+}
+
+table.rouge-table td.rouge-gutter,
+table.rouge-table td.gutter {
+  width: 1px;
+  white-space: nowrap;
+  user-select: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.85rem 0.65rem 0.85rem 1rem;
+}
+
+table.rouge-table td.rouge-gutter pre,
+table.rouge-table td.gutter pre {
+  margin: 0;
+  padding: 0;
+  color: #6b7785;
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+table.rouge-table td.rouge-code,
+table.rouge-table td.code {
+  width: 100%;
+  padding: 0.85rem 1rem;
+}
+
+table.rouge-table td.rouge-code pre,
+table.rouge-table td.code pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+}
+
+/* Code blocks without line numbers (fallback) */
+.highlighter-rouge > .highlight > pre,
+figure.highlight > pre {
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+}
+
+/* Rouge syntax tokens — dark theme */
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs,
+.highlight .ch, .highlight .cp, .highlight .cpf { color: #8d97a4; font-style: italic; }
+.highlight .k, .highlight .kn, .highlight .kr, .highlight .kp,
+.highlight .kc, .highlight .kd, .highlight .kt { color: #ff79c6; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .se,
+.highlight .sb, .highlight .sc, .highlight .sd, .highlight .sx,
+.highlight .sh, .highlight .si, .highlight .sr, .highlight .ss,
+.highlight .dl { color: #f1fa8c; }
+.highlight .nb, .highlight .bp { color: #8be9fd; }
+.highlight .nf, .highlight .fm { color: #50fa7b; }
+.highlight .nc, .highlight .nn, .highlight .nt { color: #8be9fd; font-weight: 700; }
+.highlight .n, .highlight .nl, .highlight .nv,
+.highlight .vc, .highlight .vg, .highlight .vi { color: #f8f8f2; }
+.highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo,
+.highlight .il, .highlight .mb { color: #bd93f9; }
+.highlight .o, .highlight .ow { color: #ff79c6; }
+.highlight .p, .highlight .pi { color: #f8f8f2; }
+.highlight .err { color: #ff5555; }
+.highlight .gi { color: #50fa7b; }
+.highlight .gd { color: #ff5555; }
 
 .copy-status {
   min-height: 1.6rem;

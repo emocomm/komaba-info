@@ -55,7 +55,9 @@
       <div class="header-inner">
         <a class="brand" href="{{ section_base | append: '/' | relative_url }}" aria-label="トップへ">
           <span class="brand-kicker">駒場情報演習教材</span>
-          <strong class="brand-title">{{ section_nav.title | default: site.description }}</strong>
+          {% if section_nav %}
+            <strong class="brand-title">{{ section_nav.title }}</strong>
+          {% endif %}
         </a>
         {% if section_nav %}
           <details class="nav-menu">

@@ -1,0 +1,20 @@
+# トップページに表示する教材一覧。
+# - 表示順は上から順。
+# - visible: false にすると、その教材は一覧から非表示になります。
+sections:
+  - title: "チャット会話の平均情報量分析"
+    description: "2種類のチャット会話を題材に、スプレッドシートで文字の頻度から平均情報量を計算し、違いをレポートにまとめます。"
+    url: "/entropy/"
+    visible: true
+  - title: "公開鍵暗号とディジタル署名"
+    description: "教員の公開鍵で本文を暗号化し、自分の秘密鍵で署名する流れを通して、鍵の役割と使い分けを体験します。"
+    url: "/crypto/"
+    visible: true
+  - title: "Scratchによるプログラミング入門"
+    description: "ブロックを組み合わせるビジュアルプログラミングで、条件分岐・繰り返し・リストといった基本概念に触れます。"
+    url: "/scratch/"
+    visible: true
+  - title: "Pythonによるプログラミング入門"
+    description: "Google Colab 上で Python を動かしながら、条件分岐・繰り返し・リストといった基本構文を学びます。"
+    url: "/python/"
+    visible: false

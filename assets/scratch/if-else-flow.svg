@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 470" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif" role="img" aria-labelledby="ifelse-title">
+  <title id="ifelse-title">条件分岐の流れ図</title>
+  <defs>
+    <marker id="ifelse-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#202124"/>
+    </marker>
+  </defs>
+
+  <!-- 開始 -->
+  <ellipse cx="290" cy="30" rx="55" ry="22" fill="#f0f7f4" stroke="#66706b" stroke-width="1.5"/>
+  <text x="290" y="36" text-anchor="middle" font-size="15" fill="#202124">開始</text>
+  <line x1="290" y1="52" x2="290" y2="86" stroke="#202124" stroke-width="1.8" marker-end="url(#ifelse-arrow)"/>
+
+  <!-- 入力 -->
+  <rect x="170" y="86" width="240" height="48" rx="8" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <text x="290" y="116" text-anchor="middle" font-size="15" fill="#202124">テストの点数を入力する</text>
+  <line x1="290" y1="134" x2="290" y2="166" stroke="#202124" stroke-width="1.8" marker-end="url(#ifelse-arrow)"/>
+
+  <!-- 条件 -->
+  <polygon points="290,166 415,235 290,304 165,235" fill="#fff" stroke="#115e59" stroke-width="2"/>
+  <text x="290" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#202124">点数 &lt; 50 ?</text>
+
+  <!-- Yes (左) -->
+  <line x1="165" y1="235" x2="95" y2="235" stroke="#202124" stroke-width="1.8"/>
+  <line x1="95" y1="235" x2="95" y2="330" stroke="#202124" stroke-width="1.8" marker-end="url(#ifelse-arrow)"/>
+  <text x="130" y="225" text-anchor="middle" font-size="13" font-weight="700" fill="#b45309">Yes</text>
+
+  <!-- No (右) -->
+  <line x1="415" y1="235" x2="485" y2="235" stroke="#202124" stroke-width="1.8"/>
+  <line x1="485" y1="235" x2="485" y2="330" stroke="#202124" stroke-width="1.8" marker-end="url(#ifelse-arrow)"/>
+  <text x="450" y="225" text-anchor="middle" font-size="13" font-weight="700" fill="#0f766e">No</text>
+
+  <!-- 不合格 -->
+  <rect x="15" y="330" width="160" height="48" rx="8" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <text x="95" y="360" text-anchor="middle" font-size="15" fill="#202124">「不合格！」と話す</text>
+
+  <!-- 合格 -->
+  <rect x="405" y="330" width="160" height="48" rx="8" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <text x="485" y="360" text-anchor="middle" font-size="15" fill="#202124">「合格！」と話す</text>
+
+  <!-- 合流 -->
+  <line x1="95" y1="378" x2="95" y2="410" stroke="#202124" stroke-width="1.8"/>
+  <line x1="485" y1="378" x2="485" y2="410" stroke="#202124" stroke-width="1.8"/>
+  <line x1="95" y1="410" x2="485" y2="410" stroke="#202124" stroke-width="1.8"/>
+  <line x1="290" y1="410" x2="290" y2="428" stroke="#202124" stroke-width="1.8" marker-end="url(#ifelse-arrow)"/>
+
+  <!-- 終了 -->
+  <ellipse cx="290" cy="448" rx="55" ry="22" fill="#f0f7f4" stroke="#66706b" stroke-width="1.5"/>
+  <text x="290" y="454" text-anchor="middle" font-size="15" fill="#202124">終了</text>
+</svg>

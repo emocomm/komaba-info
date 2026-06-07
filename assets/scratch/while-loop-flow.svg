@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif" role="img" aria-labelledby="while-title">
+  <title id="while-title">繰り返し処理の流れ図</title>
+  <defs>
+    <marker id="while-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#202124"/>
+    </marker>
+  </defs>
+
+  <!-- 開始 -->
+  <ellipse cx="290" cy="30" rx="55" ry="22" fill="#f0f7f4" stroke="#66706b" stroke-width="1.5"/>
+  <text x="290" y="36" text-anchor="middle" font-size="15" fill="#202124">開始</text>
+  <line x1="290" y1="52" x2="290" y2="86" stroke="#202124" stroke-width="1.8" marker-end="url(#while-arrow)"/>
+
+  <!-- 入力 -->
+  <rect x="170" y="86" width="240" height="48" rx="8" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <text x="290" y="116" text-anchor="middle" font-size="15" fill="#202124">テストの点数を入力する</text>
+  <line x1="290" y1="134" x2="290" y2="166" stroke="#202124" stroke-width="1.8" marker-end="url(#while-arrow)"/>
+
+  <!-- 条件 -->
+  <polygon points="290,166 430,235 290,304 150,235" fill="#fff" stroke="#115e59" stroke-width="2"/>
+  <text x="290" y="225" text-anchor="middle" font-size="14" font-weight="700" fill="#202124">入力が</text>
+  <text x="290" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#202124">「おわり」?</text>
+
+  <!-- Yes (右) → 終了 -->
+  <line x1="430" y1="235" x2="525" y2="235" stroke="#202124" stroke-width="1.8"/>
+  <line x1="525" y1="235" x2="525" y2="448" stroke="#202124" stroke-width="1.8"/>
+  <line x1="525" y1="448" x2="347" y2="448" stroke="#202124" stroke-width="1.8" marker-end="url(#while-arrow)"/>
+  <text x="478" y="225" text-anchor="middle" font-size="13" font-weight="700" fill="#0f766e">Yes</text>
+
+  <!-- No (下) -->
+  <line x1="290" y1="304" x2="290" y2="334" stroke="#202124" stroke-width="1.8" marker-end="url(#while-arrow)"/>
+  <text x="312" y="320" text-anchor="start" font-size="13" font-weight="700" fill="#b45309">No</text>
+
+  <!-- 頑張ったね -->
+  <rect x="175" y="334" width="230" height="48" rx="8" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <text x="290" y="364" text-anchor="middle" font-size="15" fill="#202124">「頑張ったね！」と話す</text>
+
+  <!-- ループバック -->
+  <line x1="175" y1="358" x2="65" y2="358" stroke="#202124" stroke-width="1.8"/>
+  <line x1="65" y1="358" x2="65" y2="110" stroke="#202124" stroke-width="1.8"/>
+  <line x1="65" y1="110" x2="170" y2="110" stroke="#202124" stroke-width="1.8" marker-end="url(#while-arrow)"/>
+  <text x="55" y="230" text-anchor="end" font-size="13" font-weight="700" fill="#66706b">繰り返し</text>
+
+  <!-- 終了 -->
+  <ellipse cx="292" cy="448" rx="55" ry="22" fill="#f0f7f4" stroke="#66706b" stroke-width="1.5"/>
+  <text x="292" y="454" text-anchor="middle" font-size="15" fill="#202124">終了</text>
+</svg>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 230" font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', 'Noto Sans JP', sans-serif" role="img" aria-labelledby="list-title">
+  <title id="list-title">リストの作成と操作の流れ</title>
+  <defs>
+    <marker id="list-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#202124"/>
+    </marker>
+  </defs>
+
+  <!-- ① 空のリスト -->
+  <text x="80" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#0f766e">① リストAを作る</text>
+  <rect x="20" y="48" width="120" height="130" rx="6" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <line x1="20" y1="80" x2="140" y2="80" stroke="#d7dde5" stroke-width="1"/>
+  <line x1="20" y1="113" x2="140" y2="113" stroke="#d7dde5" stroke-width="1"/>
+  <line x1="20" y1="146" x2="140" y2="146" stroke="#d7dde5" stroke-width="1"/>
+  <text x="80" y="120" text-anchor="middle" font-size="13" fill="#66706b">（空）</text>
+  <text x="80" y="200" text-anchor="middle" font-size="12" fill="#66706b">リストA</text>
+
+  <!-- ① → ② -->
+  <line x1="155" y1="113" x2="195" y2="113" stroke="#202124" stroke-width="1.8" marker-end="url(#list-arrow)"/>
+  <text x="175" y="103" text-anchor="middle" font-size="12" fill="#66706b">追加</text>
+
+  <!-- ② 数学を追加 -->
+  <text x="270" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#0f766e">② 「数学」を追加</text>
+  <rect x="210" y="48" width="120" height="130" rx="6" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <line x1="210" y1="80" x2="330" y2="80" stroke="#d7dde5" stroke-width="1"/>
+  <line x1="210" y1="113" x2="330" y2="113" stroke="#d7dde5" stroke-width="1"/>
+  <line x1="210" y1="146" x2="330" y2="146" stroke="#d7dde5" stroke-width="1"/>
+  <text x="270" y="71" text-anchor="middle" font-size="14" fill="#202124">数学</text>
+  <text x="270" y="200" text-anchor="middle" font-size="12" fill="#66706b">リストA</text>
+
+  <!-- ② → ③ -->
+  <line x1="345" y1="113" x2="385" y2="113" stroke="#202124" stroke-width="1.8" marker-end="url(#list-arrow)"/>
+  <text x="365" y="103" text-anchor="middle" font-size="12" fill="#66706b">追加</text>
+
+  <!-- ③ 英語を追加 -->
+  <text x="460" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#0f766e">③ 「英語」を追加</text>
+  <rect x="400" y="48" width="120" height="130" rx="6" fill="#fff" stroke="#0f766e" stroke-width="2"/>
+  <line x1="400" y1="80" x2="520" y2="80" stroke="#d7dde5" stroke-width="1"/>
+  <line x1="400" y1="113" x2="520" y2="113" stroke="#d7dde5" stroke-width="1"/>
+  <line x1="400" y1="146" x2="520" y2="146" stroke="#d7dde5" stroke-width="1"/>
+  <text x="460" y="71" text-anchor="middle" font-size="14" fill="#202124">数学</text>
+  <text x="460" y="104" text-anchor="middle" font-size="14" fill="#202124">英語</text>
+  <text x="460" y="200" text-anchor="middle" font-size="12" fill="#66706b">リストA</text>
+
+  <!-- ③ → ④ -->
+  <line x1="535" y1="113" x2="575" y2="113" stroke="#202124" stroke-width="1.8" marker-end="url(#list-arrow)"/>
+  <text x="555" y="103" text-anchor="middle" font-size="12" fill="#66706b">確認</text>
+
+  <!-- ④ 含まれる？ -->
+  <text x="650" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#0f766e">④ 「数学」が</text>
+  <text x="650" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#0f766e">含まれる？</text>
+  <rect x="590" y="48" width="120" height="130" rx="6" fill="#fff6e7" stroke="#b45309" stroke-width="2"/>
+  <line x1="590" y1="80" x2="710" y2="80" stroke="#b45309" stroke-width="1.5"/>
+  <line x1="590" y1="113" x2="710" y2="113" stroke="#d7dde5" stroke-width="1"/>
+  <line x1="590" y1="146" x2="710" y2="146" stroke="#d7dde5" stroke-width="1"/>
+  <text x="650" y="71" text-anchor="middle" font-size="14" font-weight="700" fill="#b45309">数学 ✓</text>
+  <text x="650" y="104" text-anchor="middle" font-size="14" fill="#202124">英語</text>
+  <text x="650" y="200" text-anchor="middle" font-size="12" fill="#b45309">→ True</text>
+</svg>
