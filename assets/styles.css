@@ -788,3 +788,197 @@ textarea.visual-fingerprint {
     font-size: 0.92rem;
   }
 }
+
+/* ===== フィッツの法則 実験ツール ===== */
+.fitts-step {
+  margin-top: clamp(1.8rem, 4vw, 3rem);
+  padding-top: clamp(1.2rem, 3vw, 2rem);
+  border-top: 1px solid var(--line);
+}
+
+.fitts-step:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 1.5rem;
+}
+
+.fitts-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 0.5rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 800;
+  vertical-align: 0.1rem;
+}
+
+/* キャリブレーションのカード */
+.fitts-card-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--surface-2),
+      var(--surface-2) 12px,
+      #e8f0ee 12px,
+      #e8f0ee 24px
+    );
+}
+
+.fitts-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 323px;
+  height: 204px;
+  padding: 0.9rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 60%, #0c4a44 100%);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+  color: #eafaf6;
+  overflow: hidden;
+}
+
+.fitts-card::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9px;
+  pointer-events: none;
+}
+
+.fitts-card-chip {
+  display: block;
+  width: 2.6rem;
+  height: 1.9rem;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #f5d782, #c89b3c);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.fitts-card-label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.fitts-card-sub {
+  font-size: 0.74rem;
+  opacity: 0.85;
+}
+
+.fitts-slider {
+  width: 100%;
+  margin: 0.5rem 0;
+  accent-color: var(--primary);
+}
+
+.fitts-cal-status {
+  min-height: 1.6rem;
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.fitts-cal-status.done {
+  color: var(--ok);
+}
+
+/* プリセットのボタン群 */
+.fitts-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+/* 全画面の実験オーバーレイ */
+.fitts-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: var(--surface);
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+.fitts-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem clamp(1rem, 4vw, 2rem);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid var(--line);
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.fitts-cancel {
+  min-height: 2.1rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  background: transparent;
+  color: var(--primary-dark);
+  border-color: var(--line);
+}
+
+.fitts-cancel:hover {
+  background: var(--surface-2);
+  color: var(--primary-dark);
+  border-color: var(--line);
+}
+
+.fitts-target {
+  position: absolute;
+  min-height: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.08s ease, box-shadow 0.08s ease;
+}
+
+.fitts-target.active {
+  background: var(--primary);
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 0 8px rgba(15, 118, 110, 0.16);
+  cursor: pointer;
+}
+
+.fitts-target.inactive {
+  background: transparent;
+  border: 3px dashed var(--line);
+  cursor: default;
+}
+
+.fitts-instruction {
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  transform: translateX(-50%);
+  max-width: 90vw;
+  margin: 0;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 700;
+}

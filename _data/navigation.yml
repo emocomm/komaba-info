@@ -1,4 +1,23 @@
 sections:
+  "fitts":
+    title: "フィッツの法則とインターフェース設計"
+    pages:
+      - title: "はじめに"
+        url: "/fitts/"
+      - title: "フィッツの法則とは"
+        url: "/fitts/about/"
+      - title: "今回の課題の全体像"
+        url: "/fitts/overview/"
+      - title: "実験の手順"
+        url: "/fitts/experiment/"
+      - title: "分析の手順"
+        url: "/fitts/analysis/"
+      - title: "レポート要件"
+        url: "/fitts/report/"
+    tools:
+      - title: "フィッツの法則 実験ツール"
+        url: "/fitts/experiment-tool/"
+        new_tab: true
   "entropy":
     title: "チャット会話の平均情報量分析"
     pages:
