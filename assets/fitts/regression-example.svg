@@ -42,20 +42,11 @@
   <line x1="70" y1="400" x2="650" y2="400" stroke="#202124" stroke-width="1.6"/>
 
   <!-- 軸タイトル -->
-  <text x="360" y="448" text-anchor="middle" font-size="14" font-weight="700" fill="#202124">困難指数 ID</text>
-  <text x="22" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#202124" transform="rotate(-90 22 220)">クリック時間 T（ms）</text>
+  <text x="360" y="448" text-anchor="middle" font-size="14" font-weight="700" fill="#202124">困難指数ID</text>
+  <text x="22" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#202124" transform="rotate(-90 22 220)">クリック時間T（ms）</text>
 
-  <!-- 回帰直線（T = a + b·ID）。横軸は ID=2 付近から始まるので、左端でも ID=0 には届かない -->
+  <!-- 回帰直線。横軸は ID=2 付近から始まるので、左端でも ID=0 には届かない -->
   <line x1="70" y1="232.4" x2="650" y2="73.7" stroke="#a34f22" stroke-width="2.5"/>
-
-  <!-- 傾き b の注記 -->
-  <text x="148" y="188" font-size="13" font-weight="700" fill="#a34f22">傾き b</text>
-
-  <!-- 回帰式 -->
-  <text x="380" y="64" text-anchor="middle" font-size="14" font-weight="700" fill="#202124">T = a + b · ID</text>
-
-  <!-- 切片が見えないことの注記 -->
-  <text x="95" y="300" font-size="11.5" fill="#66706b">※ 横軸は ID=0 まで届かないので、切片 a はグラフには現れません</text>
 
   <!-- データ点 -->
   <g fill="#0f766e" stroke="#ffffff" stroke-width="1.5">
