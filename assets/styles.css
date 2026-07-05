@@ -982,3 +982,140 @@ textarea.visual-fingerprint {
   color: var(--muted);
   font-weight: 700;
 }
+
+/* ===== バイブコーディング（Gemini Canvas）===== */
+.article-card {
+  display: block;
+  max-width: 640px;
+  margin: 1rem 0;
+  padding: 0.95rem 1.1rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.article-card:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.article-card-source {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.article-card-title {
+  display: block;
+  margin: 0.35rem 0 0.45rem;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--primary-dark);
+}
+
+.article-card-excerpt {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.article-card-link {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.tweet-card {
+  max-width: 550px;
+  margin: 1.2rem 0;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.tweet-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.tweet-card-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f766e, #115e59);
+  flex: none;
+}
+
+.tweet-card-name {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.tweet-card-handle {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.tweet-card-body {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.tweet-card-foot {
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.tweet-card-foot a {
+  font-weight: 700;
+}
+
+/* Canvas / 開発ツールの比較カード */
+.tool-compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0;
+}
+
+.tool-compare .card {
+  margin: 0;
+}
+
+.tool-compare .card h3 {
+  margin-top: 0;
+}
+
+.tool-tag {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.tool-tag.today {
+  background: #e8f0ee;
+  color: var(--primary-dark);
+}
+
+.tool-tag.later {
+  background: #fff6e7;
+  color: var(--warn);
+}

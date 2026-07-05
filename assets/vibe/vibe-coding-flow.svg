@@ -1,0 +1,48 @@
+<svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="今までの作り方は企画者・デザイナー・エンジニアの3ステップ。バイブコーディングでは企画者が仕様書を書いてAIと一緒に作る1ステップになる。">
+  <style>
+    .title { font: 800 19px -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+    .role  { font: 800 16px -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+    .desc  { font: 400 13px -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+    .ai    { font: 700 12px -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  </style>
+  <!-- 左パネル：今までの作り方 -->
+  <rect x="10" y="10" width="360" height="450" rx="14" fill="#f6f8fb" stroke="#d7dde5"/>
+  <text x="190" y="46" text-anchor="middle" class="title" fill="#202124">今までの作り方</text>
+
+  <!-- Box1 企画者 -->
+  <rect x="55" y="70" width="270" height="66" rx="10" fill="#ffffff" stroke="#d7dde5"/>
+  <text x="190" y="98" text-anchor="middle" class="role" fill="#115e59">企画者</text>
+  <text x="190" y="120" text-anchor="middle" class="desc" fill="#66706b">仕様書を書く</text>
+  <line x1="190" y1="142" x2="190" y2="166" stroke="#66706b" stroke-width="2"/>
+  <polygon points="182,164 198,164 190,177" fill="#66706b"/>
+
+  <!-- Box2 デザイナー -->
+  <rect x="55" y="184" width="270" height="66" rx="10" fill="#ffffff" stroke="#d7dde5"/>
+  <text x="190" y="212" text-anchor="middle" class="role" fill="#115e59">デザイナー</text>
+  <text x="190" y="234" text-anchor="middle" class="desc" fill="#66706b">画面のイメージを作る</text>
+  <line x1="190" y1="256" x2="190" y2="280" stroke="#66706b" stroke-width="2"/>
+  <polygon points="182,278 198,278 190,291" fill="#66706b"/>
+
+  <!-- Box3 エンジニア -->
+  <rect x="55" y="298" width="270" height="66" rx="10" fill="#ffffff" stroke="#d7dde5"/>
+  <text x="190" y="326" text-anchor="middle" class="role" fill="#115e59">エンジニア</text>
+  <text x="190" y="348" text-anchor="middle" class="desc" fill="#66706b">コーディングをする</text>
+
+  <text x="190" y="412" text-anchor="middle" class="desc" fill="#66706b">役割を分担して、</text>
+  <text x="190" y="432" text-anchor="middle" class="desc" fill="#66706b">順番に手渡していく</text>
+
+  <!-- 右パネル：バイブコーディング -->
+  <rect x="390" y="10" width="360" height="450" rx="14" fill="#f0f7f4" stroke="#0f766e"/>
+  <text x="570" y="46" text-anchor="middle" class="title" fill="#115e59">バイブコーディングの作り方</text>
+
+  <!-- 企画者 + AI -->
+  <rect x="435" y="150" width="270" height="150" rx="12" fill="#ffffff" stroke="#0f766e" stroke-width="2"/>
+  <text x="570" y="196" text-anchor="middle" class="role" fill="#115e59">企画者</text>
+  <text x="570" y="220" text-anchor="middle" class="desc" fill="#66706b">仕様書を書いて</text>
+  <text x="570" y="240" text-anchor="middle" class="desc" fill="#66706b">AIと一緒に作る</text>
+  <rect x="510" y="256" width="120" height="28" rx="14" fill="#0f766e"/>
+  <text x="570" y="275" text-anchor="middle" class="ai" fill="#ffffff">＋ AI</text>
+
+  <text x="570" y="412" text-anchor="middle" class="desc" fill="#66706b">1人がAIと対話しながら、</text>
+  <text x="570" y="432" text-anchor="middle" class="desc" fill="#66706b">その場で動くものを作る</text>
+</svg>

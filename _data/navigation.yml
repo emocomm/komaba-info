@@ -1,4 +1,21 @@
 sections:
+  "vibe":
+    title: "バイブコーディングでプロトタイプを作る"
+    pages:
+      - title: "はじめに"
+        url: "/vibe/"
+      - title: "バイブコーディングとは"
+        url: "/vibe/about/"
+      - title: "どのツールを使う？"
+        url: "/vibe/tools/"
+      - title: "Gemini Canvasの使い方"
+        url: "/vibe/steps/"
+      - title: "今回の課題"
+        url: "/vibe/assignment/"
+      - title: "人に見せて意見をもらう"
+        url: "/vibe/feedback/"
+      - title: "提出"
+        url: "/vibe/submission/"
   "fitts":
     title: "フィッツの法則とインターフェース設計"
     pages:

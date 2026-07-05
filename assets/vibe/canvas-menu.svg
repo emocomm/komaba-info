@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Geminiの入力欄の下にある「ツール」ボタンを押すと、Deep Research・動画を作成・画像を作成・Canvas・ガイド付き学習のメニューが開く。その中からCanvasを選ぶ。">
+  <style>
+    .lbl   { font: 400 15px -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+    .lblb  { font: 700 15px -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+    .ph    { font: 400 16px -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+    .mini  { font: 400 14px -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  </style>
+
+  <rect x="0" y="0" width="760" height="470" fill="#eef1f6"/>
+
+  <!-- 入力ボックス -->
+  <rect x="40" y="30" width="680" height="130" rx="26" fill="#ffffff" stroke="#d7dde5"/>
+  <text x="72" y="76" class="ph" fill="#8a9199">Gemini 3 に相談</text>
+
+  <!-- ＋ ボタン -->
+  <circle cx="80" cy="122" r="17" fill="#ffffff" stroke="#d7dde5"/>
+  <line x1="80" y1="114" x2="80" y2="130" stroke="#5f6b76" stroke-width="2" stroke-linecap="round"/>
+  <line x1="72" y1="122" x2="88" y2="122" stroke="#5f6b76" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- ツール ピル（選択中） -->
+  <rect x="108" y="105" width="104" height="34" rx="17" fill="#e8f0ee" stroke="#0f766e"/>
+  <circle cx="129" cy="122" r="6" fill="none" stroke="#0f766e" stroke-width="2"/>
+  <text x="145" y="127" class="lblb" fill="#115e59">ツール</text>
+
+  <!-- 高速モード & マイク -->
+  <text x="600" y="127" class="mini" fill="#5f6b76">高速モード ▾</text>
+  <circle cx="694" cy="122" r="9" fill="none" stroke="#5f6b76" stroke-width="2"/>
+  <line x1="694" y1="132" x2="694" y2="139" stroke="#5f6b76" stroke-width="2"/>
+
+  <!-- ドロップダウンメニュー -->
+  <rect x="96" y="186" width="270" height="250" rx="16" fill="#ffffff" stroke="#d7dde5"/>
+
+  <!-- Deep Research -->
+  <circle cx="126" cy="214" r="7" fill="none" stroke="#5f6b76" stroke-width="2"/>
+  <text x="150" y="219" class="lbl" fill="#202124">Deep Research</text>
+
+  <!-- 動画を作成 -->
+  <rect x="119" y="243" width="14" height="12" rx="2" fill="none" stroke="#5f6b76" stroke-width="2"/>
+  <text x="150" y="254" class="lbl" fill="#202124">動画を作成（Veo 3.1）</text>
+
+  <!-- 画像を作成 -->
+  <path d="M120,283 l6,-9 l6,9 z" fill="#5f6b76"/>
+  <text x="150" y="289" class="lbl" fill="#202124">画像を作成</text>
+
+  <!-- Canvas（ハイライト） -->
+  <rect x="104" y="304" width="254" height="42" rx="9" fill="#e8f0ee"/>
+  <rect x="119" y="318" width="14" height="14" rx="3" fill="none" stroke="#0f766e" stroke-width="2"/>
+  <line x1="126" y1="318" x2="126" y2="332" stroke="#0f766e" stroke-width="2"/>
+  <text x="150" y="330" class="lblb" fill="#115e59">Canvas</text>
+
+  <!-- ガイド付き学習 -->
+  <rect x="119" y="361" width="15" height="12" rx="2" fill="none" stroke="#5f6b76" stroke-width="2"/>
+  <text x="150" y="372" class="lbl" fill="#202124">ガイド付き学習</text>
+
+  <!-- 指し示す注釈 -->
+  <text x="398" y="322" class="lblb" fill="#a34f22">← これを選ぶ</text>
+  <text x="398" y="345" class="mini" fill="#66706b">今日はここから作ります</text>
+</svg>
