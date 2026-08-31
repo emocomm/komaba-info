@@ -1,28 +1,48 @@
 # トップページに表示する教材一覧。
-# - 表示順は上から順。
+# - 表示順は上から順（授業の回の昇順）。
 # - visible: false にすると、その教材は一覧から非表示になります。
 sections:
-  - title: "バイブコーディングでプロトタイプを作る"
-    description: "コードを書かず、作りたいものを言葉で伝えてAIに作ってもらう「バイブコーディング」を、GeminiのCanvasで体験します。前回考えたインクルーシブなツールを、動くプロトタイプにします。"
-    url: "/vibe/"
+  - title: "第3回: 通学経路をグラフで表現してみよう"
+    description: "通学経路をノードとエッジからなるグラフとして表現し、立ち寄り先や余分な時間の表し方を考えて、画像で提出します。"
+    url: "/route-graph/"
     visible: true
-  - title: "フィッツの法則とインターフェース設計"
-    description: "ボタンの押しやすさを決めるフィッツの法則を、自分が参加者になる実験で確かめ、回帰分析の結果からレポートにまとめます。"
-    url: "/fitts/"
+  - title: "第4回: アイコンを使って使いやすいチャットアプリをデザインしよう"
+    description: "Google Slide上の指示にしたがって、アイコンを使ったチャットアプリのデザイン課題に取り組みます。"
+    url: "/chat-icons/"
     visible: true
-  - title: "チャット会話の平均情報量分析"
+  - title: "第5回: チャット会話の平均情報量分析"
     description: "2種類のチャット会話を題材に、スプレッドシートで文字の頻度から平均情報量を計算し、違いをレポートにまとめます。"
     url: "/entropy/"
     visible: true
-  - title: "公開鍵暗号とディジタル署名"
+  - title: "第6回: 身の回りの階層化と相互運用性を探そう"
+    description: "TCP/IPの階層化と相互運用性の仕組みを説明し、身の回りから同様の仕組みで説明できる例を挙げる課題です。"
+    url: "/layering/"
+    visible: true
+  - title: "第7回: 公開鍵暗号とディジタル署名"
     description: "教員の公開鍵で本文を暗号化し、自分の秘密鍵で署名する流れを通して、鍵の役割と使い分けを体験します。"
     url: "/crypto/"
     visible: true
-  - title: "Scratchによるプログラミング入門"
+  - title: "第8回: Scratchによるプログラミング入門"
     description: "ブロックを組み合わせるビジュアルプログラミングで、条件分岐・繰り返し・リストといった基本概念に触れます。"
     url: "/scratch/"
     visible: true
-  - title: "Pythonによるプログラミング入門"
+  - title: "第9回: Pythonによるプログラミング入門"
     description: "Google Colab 上で Python を動かしながら、条件分岐・繰り返し・リストといった基本構文を学びます。"
     url: "/python/"
-    visible: false
+    visible: true
+  - title: "第10回: 身の回りの使いにくいUI「BADUI」を見つけよう"
+    description: "日常生活で見つけた使いにくいインターフェース（BADUI）を自分で撮影して調査し、対話形式のレポートにまとめます。"
+    url: "/badui/"
+    visible: true
+  - title: "第10-11回: フィッツの法則とインターフェース設計"
+    description: "ボタンの押しやすさを決めるフィッツの法則を、自分が参加者になる実験で確かめ、回帰分析の結果からレポートにまとめます。"
+    url: "/fitts/"
+    visible: true
+  - title: "第11回: インクルーシブな社会に向けた新しいツールをデザインせよ"
+    description: "インクルーシブな社会の実現に向けて残されている課題を挙げ、それを解決する新しいツールを提案するレポートをまとめます。"
+    url: "/inclusive/"
+    visible: true
+  - title: "第12回: バイブコーディングでプロトタイプを作る"
+    description: "コードを書かず、作りたいものを言葉で伝えてAIに作ってもらう「バイブコーディング」を、GeminiのCanvasで体験します。前回考えたインクルーシブなツールを、動くプロトタイプにします。"
+    url: "/vibe/"
+    visible: true

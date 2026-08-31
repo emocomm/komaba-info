@@ -1,4 +1,29 @@
 sections:
+  "route-graph":
+    title: "通学経路をグラフで表現してみよう"
+    pages:
+      - title: "課題"
+        url: "/route-graph/"
+  "chat-icons":
+    title: "アイコンを使って使いやすいチャットアプリをデザインしよう"
+    pages:
+      - title: "課題"
+        url: "/chat-icons/"
+  "layering":
+    title: "身の回りの階層化と相互運用性を探そう"
+    pages:
+      - title: "課題"
+        url: "/layering/"
+  "badui":
+    title: "身の回りの使いにくいUI「BADUI」を見つけよう"
+    pages:
+      - title: "課題"
+        url: "/badui/"
+  "inclusive":
+    title: "インクルーシブな社会に向けた新しいツールをデザインせよ"
+    pages:
+      - title: "課題"
+        url: "/inclusive/"
   "vibe":
     title: "バイブコーディングでプロトタイプを作る"
     pages:

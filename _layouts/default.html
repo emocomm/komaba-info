@@ -53,12 +53,14 @@
   <body data-baseurl="{{ section_base | relative_url }}">
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="{{ section_base | append: '/' | relative_url }}" aria-label="トップへ">
-          <span class="brand-kicker">駒場情報演習教材</span>
+        <div class="brand">
+          <a class="brand-kicker" href="{{ '/' | relative_url }}" aria-label="教材一覧トップへ">駒場情報演習教材</a>
           {% if section_nav %}
-            <strong class="brand-title">{{ section_nav.title }}</strong>
+            <a class="brand-title-link" href="{{ section_base | append: '/' | relative_url }}" aria-label="この教材のトップへ">
+              <strong class="brand-title">{{ section_nav.title }}</strong>
+            </a>
           {% endif %}
-        </a>
+        </div>
         {% if section_nav %}
           <details class="nav-menu">
             <summary class="nav-menu-trigger" aria-label="ページ一覧を開く">
@@ -124,8 +126,8 @@
     {% if next_page %}
       {% assign footer_next_url = next_page.url %}
     {% endif %}
-    {% if footer_prev_url or footer_next_url %}
-      <footer class="site-footer">
+    <footer class="site-footer">
+      {% if footer_prev_url or footer_next_url %}
         <div class="footer-inner">
           <div>
             {% if footer_prev_url %}
@@ -138,8 +140,9 @@
             {% endif %}
           </div>
         </div>
-      </footer>
-    {% endif %}
+      {% endif %}
+      <p class="footer-copyright">&copy; <a href="https://chujo.me" target="_blank" rel="noopener">Rintaro Chujo</a></p>
+    </footer>
 
     <script src="{{ '/assets/site.js' | relative_url }}"></script>
   </body>

@@ -4,75 +4,42 @@
 
 ## 現在の構成
 
-- `index.md`: ルートの案内ページ。現在は `entropy/` に自動移動します。
-- `entropy/`: 平均情報量の演習教材一式（旧 `20260511/`）。平均情報量、文字種カウント、スプレッドシート演習を扱います。
-- `crypto/`: 公開鍵暗号とディジタル署名の演習教材一式（旧 `20260525/`）。鍵生成、暗号化、署名の演習を扱います。
-- `scratch/`: Scratchによるプログラミング入門の教材一式（旧 `20260608/`）。if/else、while、リストを扱います。
-- `20260511/`, `20260525/`, `20260608/`: 旧URL用のリダイレクトのみ。中身はそれぞれ新URLへの meta refresh スタブだけです。
-- `_data/navigation.yml`: セクションごとのページ順、メニュー、ツール一覧。
-- `_layouts/default.html`: 全セクションで共通利用するJekyllレイアウト。
-- `assets/`: 共通CSSとJavaScript、各セクションの画像。
-- `_config.yml`: Jekyll設定。`docs/` 配下、`README.md`、Bundler関連ファイルなどは公開サイトから除外します。
+- `index.md`: トップページ。`_data/home.yml` に登録された教材の一覧をカードで表示します。
+- `vibe/`: バイブコーディングでプロトタイプを作る教材一式。Gemini Canvasを使い、言葉で伝えてAIにプロトタイプを作ってもらう演習です。
+- `fitts/`: フィッツの法則とインターフェース設計の教材一式。実験ツール（`fitts/experiment-tool/`）で自分のデータを取り、回帰分析してレポートにまとめます。
+- `entropy/`: チャット会話の平均情報量分析の教材一式。Google Sheetsで文字の頻度から平均情報量を計算します。文字種カウント（`entropy/count/`）とTSV変換（`entropy/tsv/`）のツールを含みます。
+- `crypto/`: 公開鍵暗号とディジタル署名の教材一式。鍵ペア作成・暗号化・署名の各ツールページを含みます。
+- `scratch/`: Scratchによるプログラミング入門の教材一式。条件分岐・繰り返し・リストを扱います。
+- `python/`: Pythonによるプログラミング入門の教材一式。Google Colab上でScratch編と同じ概念（条件分岐・繰り返し・リスト）を学びます。
+- `404.html`: 旧URL（`/20260511/`, `/20260525/`, `/20260608/`）から新URL（`/entropy/`, `/crypto/`, `/scratch/`）へJavaScriptでリダイレクトします。
+- `_data/home.yml`: トップページに表示する教材一覧。表示順と `visible` フラグ（`false` で一覧から非表示）を管理します。
+- `_data/navigation.yml`: セクションごとのページ順、右上メニュー、ツール一覧。
+- `_layouts/default.html`: 全ページ共通のJekyllレイアウト。ヘッダーのメニュー、前へ/次へのフッター、コピーライト表記を含みます。
+- `assets/`: 共通CSS（`styles.css`）とJavaScript（`site.js`）、各セクションの画像。
+- `_config.yml`: Jekyll設定。`entropy/docs/`、`crypto/docs/`、`README.md`、Bundler関連ファイルなどは公開サイトから除外します。
 - `Gemfile`: ローカルでJekyllビルドを確認するための依存関係。
 
-## entropy 教材（旧 20260511）
+`entropy/docs/` と `crypto/docs/` は元資料・仕様書置き場であり、公開サイトには出ません。
 
-教材本体は `entropy/` 配下にあります。
+## 公開URL
 
-- `entropy/index.md`: 入口ページ
-- `entropy/entropy-review/` から `entropy/extension/`: レクチャー・演習手順ページ
-- `entropy/count/`: 文字種カウントツール
-- `entropy/tsv/`: TSV変換ツール
-- `entropy/teacher/`: 教師用ページ
-- `entropy/docs/`: 元資料。公開サイトには出しません。
-
-公開後の想定URL:
+公開後の想定URLは次のとおりです。
 
 ```text
-https://<account>.github.io/komaba-info/entropy/
+https://<account>.github.io/komaba-info/
 ```
 
-旧URL `https://<account>.github.io/komaba-info/20260511/` にアクセスした場合、`20260511/` 配下のスタブが自動で `entropy/` 配下の同名ページへリダイレクトします。
-
-## crypto 教材（旧 20260525）
-
-教材本体は `crypto/` 配下にあります。
-
-- レクチャー・手順ページ
-  - `/crypto/`
-  - `/crypto/overview/`
-  - `/crypto/review/`
-  - `/crypto/key-roles/`
-  - `/crypto/exam-practice/`
-  - `/crypto/encrypt/`
-  - `/crypto/sign/`
-  - `/crypto/submission/`
-- ツールページ
-  - `/crypto/keygen/`
-  - `/crypto/encrypt-tool/`
-  - `/crypto/sign-tool/`
-  - `/crypto/teacher/`
-
-`crypto/docs/` は仕様書置き場であり、`_config.yml` の `exclude` に入れているため公開サイトには出ません。旧URL `/20260525/...` は `crypto/` 配下の同名ページへリダイレクトします。
-
-## scratch 教材（旧 20260608）
-
-教材本体は `scratch/` 配下にあります。
-
-- `scratch/index.md`: 入口ページ
-- `scratch/about/`, `scratch/start/`, `scratch/practice/`: Scratch入門
-- `scratch/if-else/`, `scratch/while-loop/`, `scratch/list/`: プログラミング入門
-- `scratch/assignment/`: 課題ページ
-
-画像は `assets/scratch/` 配下にあります。旧URL `/20260608/...` は `scratch/` 配下へリダイレクトします（サブパス名は新旧で異なるためトップにまとめてリダイレクト）。
+各教材はトップページのカードから、または `/vibe/`, `/fitts/`, `/entropy/`, `/crypto/`, `/scratch/`, `/python/` で直接アクセスします。
 
 ## 編集方針
 
 既存教材の本文を直す場合は、基本的に対象セクション配下のMarkdownページを編集します。
 
+トップページの教材一覧（表示順・表示/非表示・説明文）を直す場合は `_data/home.yml` を編集します。
+
 ページの順番、右上メニューの表示、前後ページの移動先、ツール一覧を直す場合は `_data/navigation.yml` を編集します。各ページのファイル名は内容が分かる英語名にして、並び順はこのデータファイルで管理します。
 
-別の回の教材を追加する場合は、内容に合わせた英語名のフォルダを作り、`_data/navigation.yml` の `sections` に同じキーを追加します。共通レイアウトが、そのセクションのページ一覧と `(現在/全体)` 表示を自動で作ります。
+別の回の教材を追加する場合は、内容に合わせた英語名のフォルダを作り、`_data/navigation.yml` の `sections` に同じキーを追加し、`_data/home.yml` の `sections` にトップページ用のカードを追加します。共通レイアウトが、そのセクションのページ一覧と `(現在/全体)` 表示を自動で作ります。
 
 共通の見た目を直す場合は `assets/styles.css`、コピー機能やツールの共通処理を直す場合は `assets/site.js` を編集します。
 
@@ -89,7 +56,7 @@ bundle exec jekyll serve
 ローカルでは次のURLで確認します。
 
 ```text
-http://127.0.0.1:4000/komaba-info/entropy/
+http://127.0.0.1:4000/komaba-info/
 ```
 
 ビルドだけ確認する場合は次のコマンドを使います。
